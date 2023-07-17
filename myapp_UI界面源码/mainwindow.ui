@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>myapp</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/new/image/clock.jpg</normaloff>:/new/image/clock.jpg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_add">
+         <property name="text">
+          <string>addtask</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_del">
+         <property name="text">
+          <string>deltask</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tasktable">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_status">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_user">
+    <property name="title">
+     <string>user</string>
+    </property>
+    <addaction name="action_change_user"/>
+    <addaction name="action_add_user"/>
+    <addaction name="action_del_user"/>
+    <addaction name="action_show_user"/>
+    <addaction name="action_change_password"/>
+    <addaction name="action_give_admin"/>
+   </widget>
+   <widget class="QMenu" name="menusort">
+    <property name="title">
+     <string>sort</string>
+    </property>
+    <addaction name="action_sort_by_taskID"/>
+    <addaction name="action_sort_by_start_time"/>
+    <addaction name="action_sort_by_priority"/>
+    <addaction name="action_sort_by_category"/>
+    <addaction name="action_sort_by_attention_time"/>
+   </widget>
+   <addaction name="menu_user"/>
+   <addaction name="menusort"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_change_user">
+   <property name="text">
+    <string>change user</string>
+   </property>
+  </action>
+  <action name="action_add_user">
+   <property name="text">
+    <string>add user</string>
+   </property>
+  </action>
+  <action name="action_show_user">
+   <property name="text">
+    <string>show user</string>
+   </property>
+  </action>
+  <action name="action_del_user">
+   <property name="text">
+    <string>del user</string>
+   </property>
+  </action>
+  <action name="action_change_password">
+   <property name="text">
+    <string>change password</string>
+   </property>
+  </action>
+  <action name="action_regist_user">
+   <property name="text">
+    <string>regist user</string>
+   </property>
+  </action>
+  <action name="action_sort_by_start_time">
+   <property name="text">
+    <string>sort by start time</string>
+   </property>
+  </action>
+  <action name="action_sort_by_priority">
+   <property name="text">
+    <string>sort by priority</string>
+   </property>
+  </action>
+  <action name="action_sort_by_category">
+   <property name="text">
+    <string>sort by category</string>
+   </property>
+  </action>
+  <action name="action_sort_by_attention_time">
+   <property name="text">
+    <string>sort by attention time</string>
+   </property>
+  </action>
+  <action name="action_sort_by_taskID">
+   <property name="text">
+    <string>sort by taskID</string>
+   </property>
+  </action>
+  <action name="action_give_admin">
+   <property name="text">
+    <string>give admin</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
